@@ -16,12 +16,11 @@ export const cardReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case EDIT_CARD_COMPANY:
-    // console.log(state)
-    // console.log(action.payload)
-    state.companies.splice(action.payload.id - 1, 1, action.payload)
+        const newCards = [...state.companies]
+        newCards.splice(action.payload.id - 1, 1, action.payload)
         return {
             ...state,
-            companies: [...state.companies]
+            companies: [...newCards]
         }
        default: return  state
     }
