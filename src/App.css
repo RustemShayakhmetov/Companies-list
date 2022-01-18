@@ -1,0 +1,24 @@
+body {
+  font-size: 20px;
+}
+h1 {
+  font-weight: bold;
+  font-size: 36px;
+  margin-top: 30px;
+}
+
+.btn {
+  margin-top: 5px;
+  margin-right: 10px;
+  padding: 2px 7px;
+  background-color: #8a2be2;
+}
+.edit {
+  background-color: rgba(30, 236, 57, 0.664);
+}
+input {
+  margin: 0;
+}
+.mt-4 {
+  margin-top: -1.5rem !important;
+}

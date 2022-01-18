@@ -1,0 +1,23 @@
+.card {
+  padding: 25px;
+  width: 1250px;
+  height: 720px;
+  margin-top: 75px;
+}
+.card-open {
+  font-size: 20px;
+  width: 1200px;
+  height: 720px;
+  margin-bottom: 15px;
+}
+.link {
+  display: block;
+  text-decoration: none;
+}
+.form-check-label {
+  margin-right: 15px;
+}
+.new-card {
+  margin: 5px 0px 0px 0px;
+  padding: 7px;
+}

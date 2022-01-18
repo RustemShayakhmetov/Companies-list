@@ -1,0 +1,16 @@
+.list-group-item:hover {
+  background-color: #fff;
+  color: black;
+  transition: all 0.3s;
+}
+.new {
+  font-size: 30px;
+}
+.link {
+  text-decoration: none;
+  color: #fff;
+}
+.link:hover {
+  text-decoration: none;
+  color: black;
+}
