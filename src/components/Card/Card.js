@@ -2,12 +2,12 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import "./Card.css"
-import { findCompanyData } from "../findCompanyData/findCompanyData";
+
 const Card = (listCompanies) => {
     const list = listCompanies.listCompanies
     const routeId = useParams()
-    const id = useParams()
-    const data = findCompanyData(list, routeId)
+    const company = list.filter(item => item.id == routeId.id)
+    const data = company[0]
     return (
         <div>
             <h1>Просмотр карточки</h1>
