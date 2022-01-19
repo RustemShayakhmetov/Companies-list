@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import { Link, useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import { saveEditCard } from '../../redux/actions'
-import { findCompanyData } from "../../findCompanyData/findCompanyData";
 
 import "./EditCard.css"
 
@@ -10,7 +9,8 @@ const EditCard = (listCompanies) => {
 
     const list = listCompanies.listCompanies
     const routeId = useParams()
-    const data = findCompanyData(list, routeId)
+    const company = list.filter(item => item.id == routeId.id)
+    const data = company[0]
     const { active, id, name, type, ogrn, registration} = data;
     // стейт для проверки сделан ли был клик на кнопку сохранить
     const [clickSave, setClickSave] = useState(false)
