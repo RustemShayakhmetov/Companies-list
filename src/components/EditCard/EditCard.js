@@ -9,9 +9,9 @@ const EditCard = (listCompanies) => {
 
     const list = listCompanies.listCompanies
     const routeId = useParams()
-    const company = list.filter(item => item.id == routeId.id)
-    const data = company[0]
-    const { active, id, name, type, ogrn, registration} = data;
+    const company = list.filter(item => item.id == routeId.id)[0]
+   
+    const { active, id, name, type, ogrn, registration} = company;
     // стейт для проверки сделан ли был клик на кнопку сохранить
     const [clickSave, setClickSave] = useState(false)
     // стейт для отображения данных в новой карточке
@@ -23,6 +23,10 @@ const EditCard = (listCompanies) => {
         const value = target.type === 'checkbox' ? target.checked : target.value; 
         const name = target.name;
 
+    const handleSave = () => {
+        listCompanies.saveEditCard(saveCard)
+        setClickSave(true)
+    }
     // после каждого ввода в поле, изменяем state, добавляем предыдущий state
     setSaveCard(prevState => ({
            ...prevState,
@@ -67,10 +71,9 @@ const EditCard = (listCompanies) => {
                     </div>
                     <div className="buttons">
                         <div className="btn edit" 
-                            onClick={ () => {
-                            listCompanies.saveEditCard(saveCard)
-                            setClickSave(true)
-                        }}>Сохранить</div>
+                            onClick={handleSave}}>
+                                Сохранить
+                        </div>
                         <div className="btn exit"><Link to ="/" className="link">Закрыть</Link></div>
                     </div>
                 </div>
