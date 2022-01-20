@@ -6,7 +6,7 @@ import "./Card.css"
 const Card = (listCompanies) => {
     const list = listCompanies.listCompanies
     const routeId = useParams()
-    const company = list.filter(item => item.id == routeId.id)[0]
+    const company = list.filter(item => item.id === routeId.id)[0]
 
     return (
         <div>
