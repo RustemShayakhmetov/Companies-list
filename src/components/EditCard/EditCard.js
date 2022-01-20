@@ -22,16 +22,16 @@ const EditCard = (listCompanies) => {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value; 
         const name = target.name;
-
-    const handleSave = () => {
-        listCompanies.saveEditCard(saveCard)
-        setClickSave(true)
-    }
+        
     // после каждого ввода в поле, изменяем state, добавляем предыдущий state
     setSaveCard(prevState => ({
            ...prevState,
            [name]: value
        }))
+    }
+    const handleSave = () => {
+        listCompanies.saveEditCard(saveCard)
+        setClickSave(true)
     }
     return (
         <div>
