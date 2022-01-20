@@ -71,7 +71,7 @@ const EditCard = (listCompanies) => {
                     </div>
                     <div className="buttons">
                         <div className="btn edit" 
-                            onClick={handleSave}}>
+                            onClick={handleSave}>
                                 Сохранить
                         </div>
                         <div className="btn exit"><Link to ="/" className="link">Закрыть</Link></div>
