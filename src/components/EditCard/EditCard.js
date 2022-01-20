@@ -9,7 +9,7 @@ const EditCard = (listCompanies) => {
 
     const list = listCompanies.listCompanies
     const routeId = useParams()
-    const company = list.filter(item => item.id == routeId.id)[0]
+    const company = list.filter(item => item.id === routeId.id)[0]
    
     const { active, id, name, type, ogrn, registration} = company;
     // стейт для проверки сделан ли был клик на кнопку сохранить
